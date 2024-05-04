@@ -1,6 +1,6 @@
 function showInfo(title, image, description) {
     var infoBox = document.getElementById('info-box');
-    
+
     // Get the container element
     var container = document.getElementById('map-container');
     
@@ -51,7 +51,8 @@ function showInfo(title, image, description) {
     infoBox.innerHTML = '<h2>' + title + '</h2>' +
                         '<img src="' + image + '" alt="' + title + '">' +
                         '<p>' + description + '</p>';
-    
+
+
     infoBox.style.display = 'block';
 }
 
