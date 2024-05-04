@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 #header {
@@ -23,34 +24,63 @@ body {
     vertical-align: middle;
 }
 
-#mapImage{
+#map-image{
     width: 1200px;
 }
 
 #map-container {
     position: relative;
+    margin: 100px auto 200px; /* Increase the margin to provide more space around the container */
+    padding: 40px; /* Increase the padding to provide more space inside the container */
+    border: 4px solid #ccc; /* Increase the border thickness */
+    max-width: 1200px;
+    overflow: hidden;
 }
+
+
+
 #info-box {
     display: none;
     position: absolute;
     background: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/*#infoBox {
-    position: absolute;
-    display: none;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     max-width: 300px;
-    text-align: center;
 }
 
-#infoImage {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}*/
+#info-box img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+@media screen and (max-width: 768px) {
+    #map-container {
+        margin: 20px auto 50px; /* Adjust margin for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+    #map-container {
+        margin: 10px auto 30px; /* Adjust margin for even smaller screens */
+        padding: 5px; /* Adjust padding for even smaller screens */
+    }
+
+    #headerText {
+        font-size: 18px; /* Decrease font size for smaller screens */
+    }
+
+    #info-box {
+        padding: 10px; /* Adjust padding for smaller screens */
+        max-width: 200px; /* Decrease max-width for smaller screens */
+    }
+
+    #map-image {
+        max-width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
