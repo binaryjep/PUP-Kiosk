@@ -2,25 +2,34 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto;
 }
 
 #header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0 ;
+    padding: 10px 0;
     top: 0;
     width: 100%;
     text-align: center;
-    position: fixed;
     z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#header:hover {
+    background-color: #555; 
 }
 
 #logo {
-    width: 50px; /* Adjust width as needed */
+    width: 50px;
     height: auto;
     margin-right: 10px;
     vertical-align: middle;
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo:hover {
+    transform: scale(1.1); 
 }
 
 #headerText {
@@ -28,20 +37,26 @@ body {
     vertical-align: middle;
 }
 
-#map-image{
+#map-image {
     width: 1200px;
+    transition: transform 0.3s ease-in-out;
 }
+
+
 
 #map-container {
     position: relative;
-    margin: 100px auto 200px; /* Increase the margin to provide more space around the container */
-    padding: 40px; /* Increase the padding to provide more space inside the container */
-    border: 4px solid #ccc; /* Increase the border thickness */
+    margin: 100px auto 200px;
+    padding: 40px;
+    border: 4px solid #ccc;
     max-width: 1200px;
     overflow: hidden;
+    transition: border-color 0.3s ease-in-out;
 }
 
-
+#map-container:hover {
+    border-color: #555; /* Darken the border on hover */
+}
 
 #info-box {
     display: none;
@@ -51,40 +66,65 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    max-width: 300px; /* Keep the maximum width for other info boxes */
+    max-width: 300px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #info-box img {
-    max-width: 100%; 
-    height: auto; 
+    max-width: 100%;
+    height: auto;
 }
 
+#info-box:hover {
+    transform: scale(2.05);
+    opacity: 0.9; /* Reduce opacity on hover */
+}
 
 @media screen and (max-width: 768px) {
     #map-container {
-        margin: 20px auto 50px; /* Adjust margin for smaller screens */
-        padding: 10px; /* Adjust padding for smaller screens */
+        margin: 20px auto 50px;
+        padding: 10px;
     }
 }
 
 /* Media query for even smaller screens */
 @media screen and (max-width: 480px) {
     #map-container {
-        margin: 10px auto 30px; /* Adjust margin for even smaller screens */
-        padding: 5px; /* Adjust padding for even smaller screens */
+        margin: 10px auto 30px;
+        padding: 5px;
     }
 
     #headerText {
-        font-size: 18px; /* Decrease font size for smaller screens */
+        font-size: 18px;
     }
 
     #info-box {
-        padding: 10px; /* Adjust padding for smaller screens */
-        max-width: 200px; /* Decrease max-width for smaller screens */
+        padding: 10px;
+        max-width: 200px;
     }
 
     #map-image {
-        max-width: 100%; /* Make the image responsive */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 100%;
+        height: auto;
     }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+footer:hover {
+    background-color: #555; /* Darken the footer on hover */
+}
+
+footer p {
+    margin: 0;
 }
